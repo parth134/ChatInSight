@@ -36,9 +36,9 @@ The WhatsApp chat data should be in the following format:
 Each message should be on a separate line, starting with the timestamp in the square brackets, followed by the sender's name and the message content.
 
 # Dependencies
- Python 3.7+
- Streamlit
- scikit-learn
+ Python 3.7+,
+ Streamlit,
+ scikit-learn,
  matplotlib
 
 # License
