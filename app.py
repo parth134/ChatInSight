@@ -66,7 +66,6 @@ if uploaded_file is not None:
             busy_day=helper.week_activity_map(selected_user,df)
             fig,ax=plt.subplots()
             ax.bar(busy_day.index,busy_day.values,color="purple")
-            plt.xticks(rotation='vertical')
             st.pyplot(fig)            
         
         with col2:
@@ -74,7 +73,6 @@ if uploaded_file is not None:
             busy_month=helper.month_activity_map(selected_user,df)
             fig,ax=plt.subplots()
             ax.bar(busy_month.index,busy_month.values,color='blue')
-            plt.xticks(rotation='vertical')
             st.pyplot(fig) 
         
         #Heatmap
@@ -100,11 +98,11 @@ if uploaded_file is not None:
                 st.dataframe(new_df)
 
         #WordCloud
-        # st.title('Wordcloud')
-        # df_wc=helper.create_wordcloud(selected_user,df)
-        # fig, ax = plt.subplots()
-        # ax.imshow(df_wc)
-        # st.pyplot(fig)
+        st.title('Wordcloud')
+        df_wc=helper.create_wordcloud(selected_user,df)
+        fig, ax = plt.subplots()
+        ax.imshow(df_wc)
+        st.pyplot(fig)
 
         #most common words
 
